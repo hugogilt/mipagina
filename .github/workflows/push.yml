@@ -3,7 +3,7 @@ name: Actualización automática en push
 on:
   push:
     branches:
-      - main  # Reemplaza 'main' con el nombre de tu rama principal
+      - master
 
 jobs:
   build:
