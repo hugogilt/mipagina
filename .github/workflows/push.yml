@@ -1,0 +1,23 @@
+name: Actualización automática en push
+
+on:
+  push:
+    branches:
+      - main  # Reemplaza 'main' con el nombre de tu rama principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código fuente
+      uses: actions/checkout@v2
+
+    - name: Actualizar el repositorio
+      run: |
+        git config user.name "Hugo"
+        git config user.email "hugogiltejero@gmail.com"
+        git pull
+        git add .
+        git commit -m "Actualización automática"
+        git push
