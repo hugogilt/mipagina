@@ -2,7 +2,7 @@ name: Actualización automática en push
 on: push
 jobs:
   first_job:
-      runs-on: Desplegando
+      runs-on: ubuntu-latest
       steps:
         - name: Print Desplegando
           run: echo "Desplegando página web..."
